@@ -9,14 +9,11 @@
 </head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
 <style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
 body {
   font-family: "Karla", sans-serif;
+  text-shadow: 3px;
 }
+
 .navbar {
     background-color: green;
   }
@@ -33,99 +30,122 @@ body {
     font-weight: bold;
   }
   .nav-link:hover {
+      color: black }
+    .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .o {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.767);
+    text-align: center;
+  }
+  .o p{
+    font-size: 26px;
+  }
+  .o h1 {
+    font-size: 60px;
+  }
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap");
+
+  body {
+    background-color: #f3f6fd;
+    font-size: 24px;
+  }
+  .logo img {
+    width: 40%;
+    height: 50%;
+  }
+  .pull {
+    text-align: right;
+  }
+  .box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card-a {
+    padding: 2% 7%;
+    background-color: green;
+    width: 100%;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    padding: 4px;
+  }
+
+  ul li:hover {
+    color: black;
+    cursor: pointer;
+  }
+  hr {
+    border-width: 3px;
+  }
+
+  .social > i {
+    padding: 5px;
+    font-size: 20px;
+    width: 30px;
+  }
+
+  .social > i:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .policy > div {
+    padding: 4px;
+  }
+
+  .heading {
+    font-family: Karla;
+    color: white;
+    font-size: 24px;
+  }
+
+  .line {
+    border-top: 2px solid rgba(189, 196, 203, 0.5);
+  }
+  @media (max-width: 768px) {
+    .o h1 {
+      font-size: 20px;
+      top: 55%;
+    }
+  }
+  @media (max-width: 768px) {
+    .o p {
+      font-size: 10px;
+      top: 55%;
+    }
+  }
+  .h5:hover {
     color: black;
   }
-.full-screen-container {
-      position: relative;
-      width: 100%;
-      height: 100vh; 
-      overflow: hidden;
+  .o h5 {
+    font-size: 25px;
+  }
+  @media (max-width: 768px) {
+    .o h5 {
+      font-size: 10px;
     }
-
-    .overlay-text {
-      font-size: 4.5rem;
-      font-weight: bold;
-      position: absolute;
-      text-align: center;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      z-index: 3;
-    }
-    .overlay-btn {
-      position: absolute;
-      text-align: center;
-      font-size: 3rem;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 3;
-      border-radius: 15px;
-      background-color: green;
-      color: white;
-      border: none;
-      width: 350px;
-      height: 70px;
-      margin-top: 30px;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); 
-      z-index: 1;
-    }
-    .overlay-btn:hover{
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
-    .card a:hover{
-      color: green;
-    }
-
-    @media (max-width: 768px) {
-      .overlay-text {
-        font-size: 2.7rem;
-        margin-top: -10%; 
-      }
-    }
-
-    @media (max-width: 576px) {
-      .overlay-text {
-        font-size: 2rem; 
-        margin-top: -30%;
-      }
-    }
-    @media (max-width: 768px) {
-      .overlay-btn {
-        width: 250px;
-        height: 50px;
-        margin-top: -10%; 
-      }
-    }
-
-    @media (max-width: 576px) {
-      .overlay-btn {
-        width: 200px;
-        height: 40px;
-        margin-top: -40%;
-      }
-    }
-    @media (max-width: 768px) {
-      .h2 {
-        font-size: 1.5rem;
-        margin-top: 5%; 
-      }
-    }
-
-    @media (max-width: 576px) {
-      .h2 {
-        font-size: 1rem;
-        margin-top: 5%;
-      }
-    }
+  }
+    
     
 
 
@@ -159,7 +179,7 @@ body {
       <div class="b collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto d-flex gap-5">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html"
+            <a class="nav-link active" aria-current="page" href="#"
               >About Tree</a
             >
           </li>
@@ -170,7 +190,7 @@ body {
             <a class="nav-link" aria-current="page" href="index.html">Seed</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html"
+            <a class="nav-link" aria-current="page" href="about-page.html"
               >About Us</a
             >
           </li>
@@ -184,19 +204,22 @@ body {
     </div>
   </nav>
 
-
-  <div class="full-screen-container">
-    <img src="assets/img/first background about tree.jpg" alt="img" class="img-fluid" >
-    <div class="overlay-text">THE VALUE OF TREES</div>
-    <button type="button" class="overlay-btn ">
-      <h1 class="h2 px-4">PLANT TREE NOW</h1>
-    </button>
-    <div class="overlay"></div>
+  <div class="container-xxl" style="padding: 0;">
+    <div class="image-container">
+      <img src="assets/img/first background about tree.png" alt="Image" class="image" />
+      <div class="o text-overlay">
+        <h1 class="text-uppercase fw-bold">THE VALUE OF <br> TREES </h1>
+        <p>We train farmers in agroforestry and <br> sustainable land use - so that they can grow <br> vibrant regional economies, thriving food <br> systems, and a healthier planet.</p>
+        <button type="button" class="btn btn" style="background-color: green">
+          <h5 style="color: white">PLANT TREES NOW</h5>
+        </button>
+      </div>
+    </div>
   </div>
-
+  
   <div class="container-xl mt-4 mb-5">
     <h1 class="fw-bold">What is a tree?</h1>
-    <p class="fs-4 text-black">We know trees are made of wood and have a trunk, branches and leaves, but how do we define what makes a tree… a tree?
+    <p class="fs-6 text-black">We know trees are made of wood and have a trunk, branches and leaves, but how do we define what makes a tree… a tree?
        A tree is a tall plant that can live a very long time. It has a single stem or trunk and branches that support leaves.
         Beneath the ground, a tree has a root system that acts as an anchor and stores the water and nutrients the plant needs to grow.</p>
        <img src="assets/img/one tree.png" class="img-fluid mb-4" alt="img">
@@ -253,6 +276,74 @@ body {
     </div>
   </div>
 
+  <div class="box-fluid">
+    <div class="card-a">
+      <div class="row">
+        <div class="col-md-4 col-sm-11 col-xs-11">
+          <div class="footer-text pull-left">
+            <div class="logo mb-4">
+              <img src="img/logo.png" alt="" />
+            </div>
+            <div class="text mt-2" style="color: white">Contact Us</div>
+            <div class="social mt-2 mb-3">
+              <i class="fa fa-facebook-official fa-sm"></i>
+              <i class="fa fa-instagram fa-lg"></i>
+              <i class="fa fa-twitter fa-lg"></i>
+              <i class="fa fa-linkedin-square fa-lg"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 col-sm-1 col-xs-1 mb-2"></div>
+        <div class="col-md-3 col-sm-4 col-xs-4">
+          <h5 class="heading">Get to know us</h5>
+          <ul style="font-size: 14px; color: white">
+            <li>Reforestation projects</li>
+            <li>Our partners</li>
+            <li>Our Team</li>
+            <li>Transparency</li>
+            <li>Get in touch</li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-4">
+          <h5 class="heading">Company</h5>
+          <ul class="card-text" style="font-size: 14px; color: white">
+            <li>About tree</li>
+            <li>FAQs</li>
+            <li>Seed</li>
+            <li>About us</li>
+            <li>Donate</li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-4">
+          <h5 class="heading">Do Good</h5>
+          <ul class="card-text" style="font-size: 14px; color: white">
+            <li>Companies</li>
+            <li>Individuals / donors</li>
+            <li>Carbon calculator</li>
+            <li>Join the team</li>
+            <li>Spread the word</li>
+          </ul>
+        </div>
+      </div>
+      <div class="line mb-4 mt-5"></div>
+      <div class="row" style="font-size: 10px">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <div class="pull">
+            <p style="color: white">
+              <i class="fa fa-copyright"></i> 2020 Privacy Polocy
+            </p>
+          </div>
+        </div>
+        <!-- <div class="col-md-6 col-sm-6 col-xs-6">                             
+            <div class="pull-right mr-4 d-flex policy">                    
+               <div>Terms of Use</div>
+               <div>Privacy Policy</div>
+               <div>Cookie Policy</div>                    
+            </div>
+            </div>                                      -->
+      </div>
+    </div>
+  </div>
 
 
 </body>
