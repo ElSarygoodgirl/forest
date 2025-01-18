@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT TREE | PAGE</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
 <style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
 body {
   font-family: "Karla", sans-serif;
+  text-shadow: 3px;
 }
+
 .navbar {
     background-color: green;
   }
@@ -33,8 +33,12 @@ body {
     font-weight: bold;
   }
   .nav-link:hover {
-    color: black;
+      color: black }
+    .image-container {
+    position: relative;
+    display: inline-block;
   }
+
   .image-container {
     position: relative;
     display: inline-block;
@@ -58,14 +62,24 @@ body {
   .o h1 {
     font-size: 60px;
   }
+  .o p{
+    font-size: 26px;
+  }
+  
   @media (max-width: 768px) {
     .o h1 {
       font-size: 20px;
       top: 55%;
     }
   }
-  .h5:hover {
-    color: black;
+  @media (max-width: 768px) {
+    .o p {
+      font-size: 10px;
+      top: 55%;
+    }
+  }
+  .btn:hover {
+    color: white;
   }
   .o h5 {
     font-size: 25px;
@@ -75,6 +89,71 @@ body {
       font-size: 10px;
     }
   }
+  .btn{
+    background-color: green;
+  }
+  .btn:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  
+
+  .logo img {
+    width: 40%;
+    height: 50%;
+  }
+  .pull {
+    text-align: right;
+  }
+  .box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card-a {
+    padding: 2% 7%;
+    background-color: green;
+    width: 100%;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    padding: 4px;
+  }
+
+  ul li:hover {
+    color: black;
+    cursor: pointer;
+  }
+  hr {
+    border-width: 3px;
+  }
+
+  .social > i {
+    padding: 5px;
+    font-size: 20px;
+    width: 30px;
+  }
+
+  .social > i:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .policy > div {
+    padding: 4px;
+  }
+
+  .heading {
+    font-family: Karla;
+    color: white;
+    font-size: 24px;
+  }
+
+  .line {
+    border-top: 2px solid rgba(189, 196, 203, 0.5);
+  }
     
 
 
@@ -83,7 +162,7 @@ body {
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="home.html">
         <img
           src="assets/img/logo-removebg-preview.png"
           alt="Logo"
@@ -92,7 +171,6 @@ body {
           class="d-inline-block align-text-top"
         />
       </a>
-
       <button
         class="navbar-toggler"
         type="button"
@@ -104,7 +182,6 @@ body {
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="b collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto d-flex gap-5">
           <li class="nav-item">
@@ -116,10 +193,10 @@ body {
             <a class="nav-link" aria-current="page" href="faq.html">FAQs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="seed page.html">Seed</a>
+            <a class="nav-link" aria-current="page" href="seed-page.html">Seed</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#"
+            <a class="nav-link" aria-current="page" href="about-page.html"
               >About Us</a
             >
           </li>
@@ -133,22 +210,225 @@ body {
     </div>
   </nav>
 
-
-  <div class="container-xxl" style="padding: 0;">
+  <div class="card-body p-0 ">
     <div class="image-container">
-      <img src="assets/img/aboutpage.png" alt="Image" class="image" />
+      <img src="assets/img/TREE PAGE3.png" alt="Image" class="image" />
       <div class="o text-overlay">
-        <h1 class="text-uppercase fw-bold">Planting trees <br> changing lives</h1>
-        <p class="fs-3">We train farmers in agroforestry and <br> sustainable land use - so that they can grow <br> vibrant regional economies, thriving food <br> systems, and a healthier planet.</p>
-        <button type="button" class="btn btn" style="background-color: green">
-          <h5 style="color: white">PLANT TREES NOW</h5>
-        </button>
+        <h1 class="text-uppercase fw-bold">Planting trees, <br> changing lives</h1>
+        <p >We train farmers in agroforestry and <br> sustainable land use - so that they <br> can grow vibrant regional economies, thriving 
+          food systems, and a healthier planet.</p>
+    </div>
+  </div>
+
+
+  <div class="container-xl mb-3 ">
+    <div class="row g-0">
+      <div class="col-md-4 mt-4 ">
+        <img src="assets/img/mission.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8 mt-1">
+        <div class="card-body">
+          <h3 class="card-title fw-bold ms-3">Our Vision and Mission</h3>
+          <p class="card-text ms-4">We believe in a world where farmers leave a legacy of opportunity through sustainable land practices. 
+            We are witnessing farmers reclaiming their agency, breaking the cycles of climate change and generational poverty, and rebuilding
+             our food systems from the ground up.</p>
+          <p class="card-text ms-4">Our mission is to improve livelihoods of impoverished farmers by 
+            revitalizing degraded lands.</p>
+        </div>
       </div>
     </div>
   </div>
 
 
+  <div class="container-xl mb-3">
+    <div class="row g-0">
+      <div class="col-md-4 mt-4 ">
+        <img src="assets/img/mission4.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8 mt-1">
+        <div class="card-body">
+          <p class="card-text mt-1 ms-4">We believe in a world where farmers leave a legacy of opportunity throTrees for the Future 
+            (TREES) is currently working with thousands of farming families around our Cambodia. Over our 30+ year history,
+             we’ve worked around our country. In 2014, we focused our work in Cambodia, where the climatic and economic challenges
+              were most pressing and we could make the greatest impact.ugh sustainable land practices. We are witnessing farmers
+               reclaiming their agency, breaking the cycles of climate change and generational poverty, and rebuilding our food 
+               systems from the ground up.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-xl mb-3">
+    <div class="row g-0">
+      <div class="col-md-4 mt-4 ">
+        <img src="assets/img/story.png" class="img-fluid rounded-start" alt="img">
+        <h5 class="text-overlay">
+          
+        </h5>
+      </div>
+      <div class="col-md-8 mt-1">
+        <div class="card-body">
+          <h3 class="card-title fw-bold ms-3">Our beginnings</h3>
+          <div class="card-group border-top border-dark mt-4 gap-3">
+            <div class="card  shadow p-3 mb-5 bg-body-tertiary rounded ">
+              <div class="card-body me-2">
+                <h5 class="card-title">1989</h5>
+                <p class="card-text">Trees for the Future was founded on August 14, 1989</p>
+              </div>
+            </div>
+            <div class="card  shadow p-3 mb-5 bg-body-tertiary rounded">
+              <div class="card-body">
+                <h5 class="card-title">2003</h5>
+                <p class="card-text">TREES reaches 30 million trees planted around the world.</p>
+              </div>
+            </div>
+            <div class="card  shadow p-3 mb-5 bg-body-tertiary rounded">
+              <div class="card-body">
+                <h5 class="card-title">2015</h5>
+                <p class="card-text">TREES surpasses 100 million trees planted around the world.</p>
+              </div>
+            </div>
+          </div>
 
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-xl">
+    <h2 class="fw-bold">how you can help</h2>
+    <p class="mt-4 mb-4">You play an important role in improving the health of forests, in your own neighborhood and across the globe. Here's how you can help.</p>
+  </div>
+
+
+  <div class="container-xl mb-3" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="assets/img/image 35.png" class="img-fluid rounded-start" alt="img">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title fw-bold">Plant a Billion Trees</h3>
+          <p class="card-text pt-3 pb-3">Donate to help us plant and care for trees in critical forests around the world in Brazil, China, Colombia, Kenya, Tanzania, Mexico and the United States.</p>
+          <button type="button" class="btn btn-success btn-lg">Plant your tree now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xl mt-5" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="assets/img/image 36.png" class="img-fluid rounded-start" alt="img">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title fw-bold">Don't Move Firewood</h3>
+          <p class="card-text pt-3 pb-3">Moving firewood across long distances can potentially transport invasive species that cause damage to forests. You can make a difference by using local or heat-treated firewood whenever you need wood for your campsite, cabin or home heating.</p>
+          <button type="button" class="btn btn-success btn-lg">Plant your tree now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card-group mt-5 container-xl border-top border-dark mt-4 gap-5">
+    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+      <img src="assets/img/donate.png" class="card-img-top" alt="img">
+      <div class="card-body me-2">
+        <h5 class="card-title fw-bold">Choose your project on Global Giving</h5>
+        <p class="card-text">Tax-deductible for US residents only.</p>
+      </div>
+    </div>
+
+    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+      <img src="assets/img/donate1.png" class="card-img-top" alt="img">
+      <div class="card-body me-2">
+        <h5 class="card-title fw-bold">Donate with cryptocurrency</h5>
+        <p class="card-text">We accept Bitcoin, Ethereum and dozens of other cryptocurrencies.</p>
+      </div>
+    </div>
+    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+      <img src="assets/img/donate2.png" class="card-img-top" alt="img">
+      <div class="card-body me-2">
+        <h5 class="card-title fw-bold">Donate with cryptocurrency</h5>
+        <p class="card-text">We accept Bitcoin, Ethereum and dozens of other cryptocurrencies.</p>
+      </div>
+    </div>
+    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+      <img src="assets/img/donate3.png" class="card-img-top" alt="img">
+      <div class="card-body me-2">
+        <h5 class="card-title fw-bold">Donate via TGE</h5>
+        <p class="card-text">Make a tax-efficient donation (dependent on your country of residence).</p>
+      </div>
+    </div>
+    
+  </div>
+
+
+  <div class="box-fluid">
+    <div class="card-a">
+      <div class="row">
+        <div class="col-md-4 col-sm-11 col-xs-11">
+          <div class="footer-text pull-left">
+            <div class="logo mb-4">
+              <img src="assets/img/logo-removebg-preview.png" alt="" />
+            </div>
+            <div class="text mt-2" style="color: white">Contact Us</div>
+            <div class="social mt-2 mb-3">
+              <i class="fa fa-facebook-official fa-sm"></i>
+              <i class="fa fa-instagram fa-lg"></i>
+              <i class="fa fa-twitter fa-lg"></i>
+              <i class="fa fa-linkedin-square fa-lg"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 col-sm-1 col-xs-1 mb-2"></div>
+        <div class="col-md-3 col-sm-4 col-xs-4">
+          <h5 class="heading">Get to know us</h5>
+          <ul style="font-size: 14px; color: white">
+            <li>Reforestation projects</li>
+            <li>Our partners</li>
+            <li>Our Team</li>
+            <li>Transparency</li>
+            <li>Get in touch</li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-4">
+          <h5 class="heading">Company</h5>
+          <ul class="card-text" style="font-size: 14px; color: white">
+            <li>About tree</li>
+            <li>FAQs</li>
+            <li>Seed</li>
+            <li>About us</li>
+            <li>Donate</li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-4">
+          <h5 class="heading">Do Good</h5>
+          <ul class="card-text" style="font-size: 14px; color: white">
+            <li>Companies</li>
+            <li>Individuals / donors</li>
+            <li>Carbon calculator</li>
+            <li>Join the team</li>
+            <li>Spread the word</li>
+          </ul>
+        </div>
+      </div>
+      <div class="line mb-4 mt-5"></div>
+      <div class="row" style="font-size: 10px">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <div class="pull">
+            <p style="color: white">
+              <i class="fa fa-copyright"></i> 2020 Privacy Polocy
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
 </body>
 </html>

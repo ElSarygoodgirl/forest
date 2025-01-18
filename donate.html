@@ -19,7 +19,7 @@
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="home.html">
           <img
             src="assets/img/logo-removebg-preview.png"
             alt="Logo"
@@ -74,100 +74,98 @@
       </div>
     </nav>
 
-    <div class="card " style="position: relative">
+    <div class="container-xxl" style="padding: 0;">
+      <div class="image-container">
+        <img src="img/donate.png" alt="Image" class="image" />
+          <div
+class="card "
+style="
+  position: absolute;
+  margin-left: 58%;
+  margin-top: 20px;
+  background-color: rgba(27, 143, 11, 0.349);
+"
+>
+<div class="card-body">
+  <h3
+    class="card-title mb-0"
+    style="
+      color: rgb(35, 136, 35);
+      text-align: center;
+      font-family: karla;
+    "
+  >
+    DONATE NOW
+  </h3>
+</div>
+<form style="margin-bottom: 10%; width: 80%; margin-left: 50px">
+  <div class="card-input mb-4">
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="first name..."
+    />
+  </div>
+  <div class="card-input mb-4">
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="last name..."
+    />
+  </div>
+  <div class="card-input mb-4">
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="amount..."
+    />
+  </div>
+  <div class="card-input mb-4">
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="email address..."
+    />
+  </div>
+  <div class="card-input mb-4">
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder=" phone number..."
+    />
+  </div>
+  <button 
+    type="submit"
+    class="btn btn-success"
+    style="
+      font-family: karla;
+    "
+  >
+    <h3 class="p-2">DONATE</h3>
+  </button>
+</form>
+</div>
+      </div>
+    </div>
+
+
+    <!-- <div class="card " style="position: relative">
       <img
         src="img/donate.png"
         class="card-img-top"
         alt="..."
         style="width: 100%; height: 100vh"
       />
-      <div
-        class="card"
-        style="
-          width: 40%;
-          height: 95%;
-          position: absolute;
-          margin-left: 58%;
-          margin-top: 20px;
-          background-color: rgba(27, 143, 11, 0.349);
-        "
-      >
-        <div class="card-body">
-          <h3
-            class="card-title"
-            style="
-              color: rgb(35, 136, 35);
-              text-align: center;
-              font-family: karla;
-            "
-          >
-            DONATE NOW
-          </h3>
-        </div>
-        <form style="margin-bottom: 10%; width: 80%; margin-left: 50px">
-          <div class="mb-4">
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              style="height: 50px"
-              placeholder="first name..."
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              style="height: 50px"
-              placeholder="last name..."
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              style="height: 50px"
-              placeholder="amount..."
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              style="height: 50px"
-              placeholder="email address..."
-            />
-          </div>
-          <div class="mb-4">
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              style="height: 50px"
-              placeholder=" phone number..."
-            />
-          </div>
-          <button
-            type="submit"
-            class="btn btn-success"
-            style="
-              width: 100%;
-              height: 60px;
-              font-size: 30px;
-              font-family: karla;
-            "
-          >
-            DONATE
-          </button>
-        </form>
-      </div>
-    </div>
+
+    </div> -->
 
     <div class="box-fluid">
       <div class="card-a">
@@ -304,4 +302,101 @@
   .line {
     border-top: 2px solid rgba(189, 196, 203, 0.5);
   }
+
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .o {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.767);
+    text-align: center;
+  }
+
+  .card {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.767);
+    text-align: center;
+  }
+  .o p{
+    font-size: 26px;
+  }
+  .o h1 {
+    font-size: 60px;
+  }
+
+  @media (max-width: 768px) {
+    .o h1 {
+      font-size: 20px;
+      top: 55%;
+    }
+  }
+  @media (max-width: 768px) {
+    .o p {
+      font-size: 10px;
+      top: 55%;
+    }
+  }
+  .h5:hover {
+    color: black;
+  }
+  .o h5 {
+    font-size: 25px;
+  }
+  @media (max-width: 768px) {
+    .o h5 {
+      font-size: 10px;
+    }
+  }
+  @media (max-width: 768px) {
+    .card {
+      top: 25%;
+      height: 240px;
+      width: 280px;
+      left: 10%;
+    }
+  }
+  @media (max-width: 768px) {
+    .card-input {
+      margin-top: -5px;
+      width: 200px;
+      height: 10px;
+
+    }
+  }
+  @media (max-width: 768px) {
+    .form-control {
+      height: 25px;
+      font-size: 10px;
+    }
+  }
+  @media (max-width: 768px) {
+    .btn {
+      height: 35px;
+      margin-left: -30px;
+      margin-top: -10px;
+    }
+  }
+  @media (max-width: 768px) {
+    .btn h3 {
+      font-size: 16px;
+      margin-top: -8px;
+    }
+  }
+
+
+
 </style>
+
