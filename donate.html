@@ -45,7 +45,7 @@
           <ul class="navbar-nav ms-auto d-flex gap-5">
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="nav-link"
                 aria-current="page"
                 href="about-tree.html"
                 >About Tree</a
@@ -55,7 +55,7 @@
               <a class="nav-link" aria-current="page" href="faq.html">FAQs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="seed-page.html"
+              <a class="nav-link" aria-current="page" href="seed page.html"
                 >Seed</a
               >
             </li>
@@ -101,7 +101,7 @@ style="
 <form style="margin-bottom: 10%; width: 80%; margin-left: 50px">
   <div class="card-input mb-4">
     <input
-      type="email"
+      type="text"
       class="form-control"
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
@@ -110,7 +110,7 @@ style="
   </div>
   <div class="card-input mb-4">
     <input
-      type="email"
+      type="text"
       class="form-control"
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
@@ -119,16 +119,16 @@ style="
   </div>
   <div class="card-input mb-4">
     <input
-      type="email"
+      type="number"
       class="form-control"
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
-      placeholder="amount..."
+      placeholder="Amount..."
     />
   </div>
   <div class="card-input mb-4">
     <input
-      type="password"
+      type="email"
       class="form-control"
       id="exampleInputPassword1"
       placeholder="email address..."
@@ -136,22 +136,58 @@ style="
   </div>
   <div class="card-input mb-4">
     <input
-      type="password"
+      type="text"
       class="form-control"
       id="exampleInputPassword1"
       placeholder=" phone number..."
     />
   </div>
-  <button 
-    type="submit"
-    class="btn btn-success"
-    style="
-      font-family: karla;
-    "
-  >
-    <h3 class="p-2">DONATE</h3>
-  </button>
+  <button id="donateButton" onclick="showAlert()">Donate</button>
+  <script>
+     function showAlert() {
+        const isDonated = true; 
+        if (isDonated) {
+            alert("You have already donated. Thank you!");
+        } else {
+            window.location.href = "/donate";
+        }
+    }
+  </script>
 </form>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+const stripe = Stripe('your-publishable-key'); 
+document.getElementById('donate-button').addEventListener('click', async () => {
+            const amount = document.getElementById('amount').value;
+            const email = document.getElementById('email').value;
+            if (!amount  !email) {
+                alert('Please fill out all fields.');
+                return;
+            }
+            const response = await fetch('/create-checkout-session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    amount: amount,
+                    email: email,
+                })
+            });
+            const session = await response.json();
+            if (session.error) {
+                alert('Error creating checkout session');
+                return;
+            }
+
+            // Redirect to the Stripe Checkout page
+            stripe.redirectToCheckout({ sessionId: session.id });
+        });
+        
+</script>
+
+
+
 </div>
       </div>
     </div>
@@ -336,6 +372,9 @@ style="
   .o h1 {
     font-size: 60px;
   }
+   .b ul li a{
+    color: white;
+   }
 
   @media (max-width: 768px) {
     .o h1 {
@@ -362,7 +401,7 @@ style="
   }
   @media (max-width: 768px) {
     .card {
-      top: 25%;
+      top: 28.5%;
       height: 240px;
       width: 280px;
       left: 10%;
